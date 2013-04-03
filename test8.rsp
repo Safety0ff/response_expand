@@ -1,0 +1,18 @@
+# test @ followed by quotes, backslash, etc
+
+# fail:
+#@\"test8b.rsp"
+#@\"test8b.rsp\"
+
+#works
+@"test8b.rsp"
+
+@"test8b.rsp
+
+foo bar"
+
+@test8b.rsp"
+
+@"test""8b.rsp"
+
+"@""test""8b.rsp"

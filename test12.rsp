@@ -1,0 +1,25 @@
+# need to test null chars
+foo#bar
+
+foo#bar"
+
+"foo#bar
+"fooba\\r\\\"
+
+"fooba\r\\\\"
+
+
+\\\
+"foo
+
+foo#asdfs
+foo #asdfs
+
+"foo #asfd"
+
+
+
+# carriage return tests
+
+
+"sdfd–dsfsfadsfdsfdsf"

@@ -1,0 +1,56 @@
+# this file tests comment, backslash and quote behaviour
+
+
+# comment test @test2.rsp
+# \@test2.rsp
+
+#\\"
+
+\\\\fooo
+\\\\"foo bar"
+\\\\foo
+\\\"foo
+\"foo
+
+# examples from https://blogs.msdn.com/b/oldnewthing/archive/2010/09/17/10063629.aspx?Redirected=true
+
+"hello there.txt"
+"C:\Hello there.txt"
+"hello\"there"
+"hello\\"
+
+foo"bar
+foo""bar
+foo"""bar
+foo"x""bar
+foo""""""bar
+foo""""""""""""bar
+
+/dir "c:\a dir\"
+"c:\a dir\\"
+c:\a dir"
+"
+""
+""""
+
+foooo#bar
+"foooo#bar
+"foooo#bar"
+
+"dir name" "C:\Storage\dir name\"
+"test\\\\\\\\"
+"test 1\"2"
+
+"nul\0"
+
+"""this" is a string
+
+"\foo\bar"
+
+Foo"X""X""X""X"bar
+
+"hello\"world"
+
+" ""	"
+
+"test\\\\\test"
