@@ -44,7 +44,8 @@ bool dealWithQuote(std::istream& is, std::string& arg)
 				if (applyBackslashRule(arg))
 					return false;
 				break;
-			case '\n': // new line ends quote and argument
+			case EOF: // new line or EOF ends quote and argument
+			case '\n':
 				return true;
 			case '\r': // ignore carriage returns in quotes
 				break;
@@ -61,7 +62,7 @@ void dealWithComment(std::istream& is)
 	{
 		char c = is.get();
 		if (c == '\n' || c == '\r')
-				return; // newline and carriage return end comments
+				return; // newline, carriage return and EOF end comment
 	}
 }
 
@@ -74,7 +75,11 @@ std::vector<std::string> expand(std::istream& is)
 	while(is.good())
 	{
 		char c = is.get();
-		if (std::isspace(c))
+		if (c == EOF)
+		{
+			break;
+		}
+		else if (std::isspace(c))
 		{
 			is >> std::ws;
 			if (!arg.empty())
@@ -101,7 +106,7 @@ std::vector<std::string> expand(std::istream& is)
 			while (is.good())
 			{
 				c = is.peek();
-				if (std::isspace(c) || c == '"')
+				if (std::isspace(c) || c == '"' || c == EOF)
 					break; // N.B. comments can't be placed in the middle of an arg
 				else
 					arg += is.get();
