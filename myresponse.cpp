@@ -1,3 +1,6 @@
+// This file is distributed under the BSD-style LDC license. See the LICENSE
+// file for details.
+
 #include <stdlib.h>
 #include <string.h>
 
