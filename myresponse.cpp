@@ -28,7 +28,8 @@ bool applyBackslashRule(std::string& arg)
 bool dealWithQuote(std::istream& is, std::string& arg)
 {
 	// first go back and deal with backslashes
-	applyBackslashRule(arg);
+	if (!applyBackslashRule(arg))
+		return false;
 
 	// keep appending until we find a quote terminator
 	while (is.good())
