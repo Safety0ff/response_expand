@@ -146,7 +146,9 @@ extern "C" int response_expand(size_t *pargc, char ***ppargv)
 			}
 			else
 			{
-				if (++response_args[arg] > reexpand_limit)
+				if (response_args.find(arg) == response_args.end())
+					response_args[arg] = 1;
+				else if (++response_args[arg] > reexpand_limit)
 					return 2; // We might be in an infinite loop
 
 				std::vector<std::string> expanded_args;
