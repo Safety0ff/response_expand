@@ -1,5 +1,9 @@
-// This file is distributed under the BSD-style LDC license. See the LICENSE
-// file for details.
+// This software is dual-licensed:
+//   This software may be redistributed under the Boost Software License, Version 1.0.
+//   (See accompanying file LICENSE or copy at http://www.boost.org/LICENSE_1_0.txt)
+//
+//   This software may be redistributed under the new BSD license.
+//   (See accompanying file LICENSE_NEWBSD)
 
 #include <stdlib.h>
 #include <string.h>
